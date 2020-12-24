@@ -6,6 +6,8 @@
 //
 //
 
+import UIKit
+
 open class SwiftPhotoGalleryCell: UICollectionViewCell {
 
     var image:UIImage? {

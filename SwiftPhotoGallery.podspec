@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Sources/SwiftPhotoGallery/**/*'
 
   s.frameworks = 'UIKit', 'Foundation'
 end

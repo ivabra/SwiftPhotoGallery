@@ -17,11 +17,6 @@ class MainCollectionViewController: UICollectionViewController {
     let imageTitles = ["Image 1", "Image 2", "Image 3"]
     var index: Int = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
