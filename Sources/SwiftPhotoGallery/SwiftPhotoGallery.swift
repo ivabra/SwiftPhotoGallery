@@ -245,6 +245,7 @@ public class SwiftPhotoGallery: UIViewController {
     private func setupPageControl() {
 
         pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.isUserInteractionEnabled = false
 
         pageControl.numberOfPages = numberOfImages
         pageControl.currentPage = 0
@@ -256,6 +257,8 @@ public class SwiftPhotoGallery: UIViewController {
         //pageControl.isHidden = hidePageControl
 
         view.addSubview(pageControl)
+      
+       
 
         pageControlCenterXConstraint = NSLayoutConstraint(item: pageControl,
                                                           attribute: NSLayoutConstraint.Attribute.centerX,
