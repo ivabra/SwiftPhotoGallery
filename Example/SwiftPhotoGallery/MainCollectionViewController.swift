@@ -44,19 +44,17 @@ class MainCollectionViewController: UICollectionViewController {
         gallery.backgroundColor = UIColor.black
         gallery.pageIndicatorTintColor = UIColor.gray.withAlphaComponent(0.5)
         gallery.currentPageIndicatorTintColor = UIColor(red: 0.0, green: 0.66, blue: 0.875, alpha: 1.0)
-        gallery.hidePageControl = false
-        gallery.modalPresentationStyle = .custom
-        gallery.transitioningDelegate = self
+      
+        let nav = UINavigationController(rootViewController: gallery)
+        nav.modalPresentationStyle = .fullScreen
 
         /// Load the first page like this:
 
-//        present(gallery, animated: true, completion: nil)
-
         /// Or load on a specific page like this:
 
-        present(gallery, animated: true, completion: { () -> Void in
-            gallery.currentPage = self.index
-        })
+      present(nav, animated: true) {
+        gallery.currentPage = self.index
+      }
     }
 
 }

@@ -87,19 +87,7 @@ class SwiftPhotoGalleryTests: XCTestCase {
 
         XCTAssert(self.testHelper.didTellDelegateTapToClose == true)
     }
-
-    func testSetCurrentPage() {
-
-        let helperCollectionView: HelperCollectionView = HelperCollectionView(frame: CGRect(x: 10, y: 10, width: 100, height: 100), collectionViewLayout: UICollectionViewFlowLayout())
-
-        testGallery.imageCollectionView = helperCollectionView
-        helperCollectionView.delegate = testGallery
-        helperCollectionView.dataSource = testGallery
-
-        testGallery.currentPage = 3
-
-        XCTAssert(helperCollectionView.didScroll == true)
-    }
+  
 
     func testReloadWithoutParameters() {
         let helperCollectionView: HelperCollectionView = HelperCollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
